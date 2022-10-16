@@ -133,45 +133,46 @@ header #navbarNav .navbar-nav .nav-item .disabled {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.13);
 }
-.carousel .carousel-item.active {
+.carousel #renderCarousel {
   height: 530px;
   background-image: url(/assets/img/image\ 6.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  overflow: hidden;
+}
+.carousel #renderCarousel .active {
   display: flex;
   justify-content: space-around;
   align-items: center;
   transition: all 0.1s;
 }
-.carousel .carousel-item.active .carousel__left {
-  width: 70%;
+.carousel #renderCarousel .active .carousel__left {
+  width: 50%;
 }
-.carousel .carousel-item.active .carousel__left img {
-  width: 70em;
+.carousel #renderCarousel .active .carousel__left img {
   padding-left: 122px;
   padding-bottom: 120px;
   object-fit: cover;
 }
-.carousel .carousel-item.active .carousel__right {
-  width: 30%;
+.carousel #renderCarousel .active .carousel__right {
+  width: 40%;
   padding-bottom: 120px;
+  padding-right: 50px;
 }
-.carousel .carousel-item.active .carousel__right h2 {
+.carousel #renderCarousel .active .carousel__right h2 {
   font-size: 40px;
   font-weight: 300;
   color: #000000 !important;
   line-height: 48.41px;
 }
-.carousel .carousel-item.active .carousel__right p {
+.carousel #renderCarousel .active .carousel__right p {
   font-size: 20px;
   font-weight: 300;
   color: #000000 !important;
   line-height: 24.2px;
   margin-bottom: 35px;
 }
-.carousel .carousel-item.active .carousel__right a {
+.carousel #renderCarousel .active .carousel__right a {
   font-size: 20px;
   font-weight: 300;
   color: #ffffff !important;
@@ -180,8 +181,8 @@ header #navbarNav .navbar-nav .nav-item .disabled {
   padding: 13px 35px 13px 35px;
   background-color: #f8b653;
 }
-.carousel .carousel-item.active .carousel__right a:hover,
-.carousel .carousel-item.active .carousel__right a :focus {
+.carousel #renderCarousel .active .carousel__right a:hover,
+.carousel #renderCarousel .active .carousel__right a :focus {
   background-color: #e1b067;
 }
 
@@ -201,7 +202,6 @@ header #navbarNav .navbar-nav .nav-item .disabled {
     height: 60vw;
   }
   .carousel #carouselCapstone .carousel-item.active .carousel__left img {
-    width: 90vw;
     padding-left: 0;
   }
   .carousel #carouselCapstone .carousel-item.active .carousel__right {
@@ -242,9 +242,6 @@ header #navbarNav .navbar-nav .nav-item .disabled {
   .carousel #carouselCapstone .carousel-item.active {
     height: 60vw;
   }
-  .carousel #carouselCapstone .carousel-item.active .carousel__left img {
-    width: 100vw;
-  }
   .carousel #carouselCapstone .carousel-item.active .carousel__right {
     width: 30vw;
     margin-left: 20px;
@@ -270,10 +267,14 @@ header #navbarNav .navbar-nav .nav-item .disabled {
   .carousel #carouselCapstone .carousel-item.active {
     height: 90vw;
   }
+  .carousel #carouselCapstone .carousel-item.active .carousel__left {
+    display: block;
+  }
   .carousel #carouselCapstone .carousel-item.active .carousel__left img {
     margin-bottom: 0;
   }
   .carousel #carouselCapstone .carousel-item.active .carousel__right {
+    display: block;
     margin-bottom: 0;
   }
   .carousel #carouselCapstone .carousel-item.active .carousel__right h2 {
@@ -321,9 +322,10 @@ header #navbarNav .navbar-nav .nav-item .disabled {
   padding: 45px 57px 10px 57px;
 }
 .product .card .card-body {
+  height: 170px;
   padding-bottom: 13px;
 }
-.product .card .card-body h5 {
+.product .card .card-body h2 {
   font-size: 24px;
   font-weight: 300;
   color: #000000 !important;
@@ -408,4 +410,57 @@ header #navbarNav .navbar-nav .nav-item .disabled {
   .product .card .card-footer .right p {
     font-size: 30px;
   }
+}
+footer {
+  margin-top: 40px;
+}
+footer .footer__top {
+  background-color: #f7f7f7;
+}
+footer .footer__top .footer__item:nth-child(2),
+footer .footer__top .footer__item:last-of-type {
+  border-left: 1px solid #cbc9c9;
+}
+footer .footer__top h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000 !important;
+  line-height: 24.2px;
+}
+footer .footer__top li {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000 !important;
+  line-height: 24.2px;
+}
+footer .footer__top li span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #f50e0e !important;
+  line-height: 24.2px;
+  cursor: pointer;
+}
+footer .footer__bottom {
+  background-color: #cbc9c9;
+}
+footer .footer__bottom h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000 !important;
+  line-height: 24.2px;
+}
+footer .footer__bottom li {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000 !important;
+  line-height: 24.2px;
+}
+footer .footer__bottom li span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #f50e0e !important;
+  line-height: 24.2px;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */

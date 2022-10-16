@@ -27,54 +27,62 @@
             border: 1px solid rgba(0, 0, 0, 0.13);
         }
     }
-
-    .carousel-item.active {
+    #renderCarousel {
         height: 530px;
         background-image: url(/assets/img/image\ 6.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
-        overflow: hidden;
+        // overflow: hidden;
+        .active {
+            // height: 530px;
+            // background-image: url(/assets/img/image\ 6.png);
+            // background-repeat: no-repeat;
+            // background-size: cover;
+            // background-position: bottom;
+            // overflow: hidden;
 
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
 
-        transition: all 0.1s;
+            transition: all 0.1s;
 
-        .carousel__left {
-            width: 70%;
+            .carousel__left {
+                width: 50%;
 
-            img {
-                width: 70em;
-                padding-left: 122px;
+                img {
+                    // width: 50em;
+                    padding-left: 122px;
+                    padding-bottom: 120px;
+                    object-fit: cover;
+                }
+            }
+
+            .carousel__right {
+                width: 40%;
                 padding-bottom: 120px;
-                object-fit: cover;
-            }
-        }
+                padding-right: 50px;
 
-        .carousel__right {
-            width: 30%;
-            padding-bottom: 120px;
+                h2 {
+                    @include text($fs5, $fw3, $color1, $lh4);
+                }
 
-            h2 {
-                @include text($fs5, $fw3, $color1, $lh4);
-            }
+                p {
+                    @include text($fs2, $fw3, $color1, $lh1);
+                    margin-bottom: 35px;
+                }
 
-            p {
-                @include text($fs2, $fw3, $color1, $lh1);
-                margin-bottom: 35px;
-            }
+                a {
+                    @include text($fs2, $fw3, $color3, $lh1);
+                    text-decoration: none;
+                    padding: 13px 35px 13px 35px;
+                    background-color: $color8;
 
-            a {
-                @include text($fs2, $fw3, $color3, $lh1);
-                text-decoration: none;
-                padding: 13px 35px 13px 35px;
-                background-color: $color8;
-
-                &:hover,
-                :focus {
-                    background-color: $color10;
+                    &:hover,
+                    :focus {
+                        background-color: $color10;
+                    }
                 }
             }
         }
@@ -127,7 +135,7 @@
 
                 .carousel__left {
                     img {
-                        width: 90vw;
+                        // width: 90vw;
                         padding-left: 0;
                     }
                 }
@@ -173,11 +181,11 @@
             .carousel-item.active {
                 height: 60vw;
 
-                .carousel__left {
-                    img {
-                        width: 100vw;
-                    }
-                }
+                // .carousel__left {
+                //     // img {
+                //     //     width: 100vw;
+                //     // }
+                // }
 
                 .carousel__right {
                     width: 30vw;
@@ -216,12 +224,14 @@
                 height: 90vw;
 
                 .carousel__left {
+                    display: block;
                     img {
                         margin-bottom: 0;
                     }
                 }
 
                 .carousel__right {
+                    display: block;
                     margin-bottom: 0;
 
                     h2 {
