@@ -31,7 +31,7 @@
         }
 
         .card-body {
-            height: 170px;
+            height: 150px;
 
             h2 {
                 @include text($fs3, $fw3, $color1, $lh5);
@@ -65,7 +65,7 @@
 
             .right {
                 p {
-                    @include text($fs1, $fw6, $color1, $lh6);
+                    @include text($fs3, $fw6, $color1, $lh6);
                     margin-bottom: 0;
                 }
 

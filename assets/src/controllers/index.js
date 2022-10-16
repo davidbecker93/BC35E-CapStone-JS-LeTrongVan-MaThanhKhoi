@@ -69,6 +69,11 @@ function renderProduct(arr) {
     };
     document.querySelector('#renderCarousel').innerHTML = carouselHTML;
 };
+function addBuy() {
+    var count = 0;
+    count++;
+    document.getElementById("numBuy").innerHTML = "(" + count + ")";
+};
 window.onload = function () {
     getDataProduct();
-}
+};

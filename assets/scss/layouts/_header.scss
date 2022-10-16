@@ -1,4 +1,8 @@
 header {
+    position: fixed;
+    width: 100%;
+    height: $pd1;
+    z-index: 10;
     .header__top {
         background-color: $color1;
         img {
@@ -23,7 +27,11 @@ header {
             }
         }
     }
+    .navbar {
+        padding: 0;
+    }
     #navbarNav {
+        background-color: $color11;
         .navbar-nav {
             .nav-item {
                 .nav-link {
