@@ -8,13 +8,27 @@ function getDataProduct() {
     promise.then(function (result) {
         renderProduct(result.data.content);
     })
+    //Thất bại
     promise.catch(function (err) {
         console.log(err);
     })
-}
+};
 
 function renderProduct(arr) {
+    var caru = arr[0]
     var contentHTML = ``;
+    var carouselHTML = `
+    <div class="carousel-item active">
+            <div class="carousel__left">
+                <img src="${caru.image}" alt="...">
+            </div>
+            <div class="carousel__right">
+                <h2>${caru.name}</h2>
+                <p>${caru.shortDescription}</p>
+                <a href="#">Buy now</a>
+            </div>
+        </div>
+    `;
     for (var i = 0; i < arr.length; i++) {
         var prod = arr[i];
         contentHTML += `
@@ -36,7 +50,25 @@ function renderProduct(arr) {
             </div>
         </div>
         `
-    }
+    };
     document.querySelector('#showProduct').innerHTML = contentHTML;
+    for (var e = 1; e < 3; e++) {
+        prod = arr[e];
+        carouselHTML += `
+        <div class="carousel-item">
+            <div class="carousel__left">
+                <img src="${prod.image}" alt="...">
+            </div>
+            <div class="carousel__right">
+                <h2>${prod.name}</h2>
+                <p>${prod.shortDescription}</p>
+                <a href="#">Buy now</a>
+            </div>
+        </div>
+        `
+    };
+    document.querySelector('#renderCarousel').innerHTML = carouselHTML;
+};
+window.onload = function () {
+    getDataProduct();
 }
-getDataProduct();

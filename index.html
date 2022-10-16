@@ -82,7 +82,7 @@
                 <li data-target="#carouselCapstone" data-slide-to="1"></li>
                 <li data-target="#carouselCapstone" data-slide-to="2"></li>
             </ol>
-            <div class="carousel-inner">
+            <div id="renderCarousel" class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="carousel__left">
                         <img src="./assets/img/image 4.png" alt="image4">
@@ -242,6 +242,70 @@
             </div>
         </div>
     </section>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer__top">
+            <div class="container row py-4 mx-auto px-0">
+                <div class="footer__item col-4 pr-0">
+                    <h3>GET HELP</h3>
+                    <ul>
+                        <li>Contact us</li>
+                        <li>Shopping</li>
+                        <li>NIKED</li>
+                        <li>Nike+</li>
+                    </ul>
+                </div>
+
+                <div class="footer__item col-4 pr-0">
+                    <h3>ORDERS</h3>
+                    <ul>
+                        <li>Payment options</li>
+                        <li>Shipping and delivery</li>
+                        <li>Returns</li>
+                    </ul>
+                </div>
+
+                <div class="footer__item col-4 pr-0">
+                    <h3>REGISTER</h3>
+                    <ul>
+                        <li>Create one account to manage everything you do with Nike, from your shopping preferences to
+                            your Nike+ activity.</li>
+                        <li><span>Learn more</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container row py-4 mx-auto px-0">
+                <div class="footer__item col-4 pr-0">
+                    <h3>REGISTER</h3>
+                    <ul>
+                        <li>Be the first to know about new products and special offers.</li>
+                        <li><span>Sign up now</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer__item col-4 pr-0">
+                    <h3>GIFT CARDS</h3>
+                    <ul>
+                        <li>Give the gift that always fits.</li>
+                        <li><span>View cards</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer__item col-4 pr-0">
+                    <h3>STORES NEAR YOU</h3>
+                    <ul>
+                        <li>Locate a Nike retail store or authorized retailer.</li>
+                        <li><span>Search</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
 
 
 
@@ -264,6 +328,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"></script>
 
     <!-- My JS  -->
+    <!-- <script>
+        $("#renderCarousel .carousel-item").first().addClass("active");
+    </script> -->
+
     <!-- <script src="./assets/src/controllers/register.js"></script>
     <script src="./assets/src/controllers/detail.js"></script> -->
     <script src="./assets/src/controllers/index.js"></script>
