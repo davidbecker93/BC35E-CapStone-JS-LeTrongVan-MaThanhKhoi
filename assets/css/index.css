@@ -7,6 +7,18 @@
 html,
 body {
   font-family: "Inter", sans-serif;
+  font-weight: 100;
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 81px;
+}
+.title h2 {
+  font-size: 40px;
+  font-weight: 400;
+  color: #000000 !important;
+  line-height: 36px;
 }
 
 header .header__top {
@@ -28,14 +40,14 @@ header .header__top li img {
 header .header__top li span {
   font-size: 30px;
   font-weight: 300;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   line-height: 36px;
 }
 header .header__top li a {
   text-decoration: none;
   font-size: 16px;
   font-weight: 300;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   line-height: 19px;
 }
 header #navbarNav .navbar-nav .nav-item .nav-link {
@@ -91,5 +103,309 @@ header #navbarNav .navbar-nav .nav-item .disabled {
 @media screen and (max-width: 400px) {
   header .header__top .trongvan {
     display: none;
+  }
+}
+.carousel {
+  padding-bottom: 30px;
+}
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+  background: transparent;
+  border: none;
+}
+.carousel .carousel-control-prev .polygon-1,
+.carousel .carousel-control-next .polygon-1 {
+  position: absolute;
+  left: 40px;
+  top: 165px;
+}
+.carousel .carousel-control-prev .polygon-2,
+.carousel .carousel-control-next .polygon-2 {
+  position: absolute;
+  right: 40px;
+  top: 165px;
+}
+.carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  margin-right: 23px;
+  margin-bottom: 72px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+}
+.carousel .carousel-item.active {
+  height: 530px;
+  background-image: url(/assets/img/image\ 6.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.1s;
+}
+.carousel .carousel-item.active .carousel__left {
+  width: 70%;
+}
+.carousel .carousel-item.active .carousel__left img {
+  width: 70em;
+  padding-left: 122px;
+  padding-bottom: 120px;
+  object-fit: cover;
+}
+.carousel .carousel-item.active .carousel__right {
+  width: 30%;
+  padding-bottom: 120px;
+}
+.carousel .carousel-item.active .carousel__right h2 {
+  font-size: 40px;
+  font-weight: 300;
+  color: #000000 !important;
+  line-height: 48.41px;
+}
+.carousel .carousel-item.active .carousel__right p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #000000 !important;
+  line-height: 24.2px;
+  margin-bottom: 35px;
+}
+.carousel .carousel-item.active .carousel__right a {
+  font-size: 20px;
+  font-weight: 300;
+  color: #ffffff !important;
+  line-height: 24.2px;
+  text-decoration: none;
+  padding: 13px 35px 13px 35px;
+  background-color: #f8b653;
+}
+.carousel .carousel-item.active .carousel__right a:hover,
+.carousel .carousel-item.active .carousel__right a :focus {
+  background-color: #e1b067;
+}
+
+/**---------------RESPONSIVE--------------------**/
+@media screen and (max-width: 1199.98px) {
+  .carousel #carouselCapstone .carousel-control-prev .polygon-1,
+.carousel #carouselCapstone .carousel-control-next .polygon-1 {
+    left: 20px;
+    top: 30vh;
+  }
+  .carousel #carouselCapstone .carousel-control-prev .polygon-2,
+.carousel #carouselCapstone .carousel-control-next .polygon-2 {
+    right: 20px;
+    top: 30vh;
+  }
+  .carousel #carouselCapstone .carousel-item.active {
+    height: 60vw;
+  }
+  .carousel #carouselCapstone .carousel-item.active .carousel__left img {
+    width: 90vw;
+    padding-left: 0;
+  }
+  .carousel #carouselCapstone .carousel-item.active .carousel__right {
+    width: 40vw;
+    margin-left: 20px;
+  }
+  .carousel #carouselCapstone .carousel-item.active .carousel__right h2 {
+    font-size: 3vw;
+    font-weight: 300;
+    color: #000000 !important;
+    line-height: 48.41px;
+  }
+  .carousel #carouselCapstone .carousel-item.active .carousel__right p {
+    font-size: 2vw;
+    font-weight: 300;
+    color: #000000 !important;
+    line-height: 24.2px;
+    margin-bottom: 35px;
+  }
+  .carousel #carouselCapstone .carousel-item.active .carousel__right a {
+    font-size: 2vw;
+    font-weight: 300;
+    color: #ffffff !important;
+    line-height: 24.2px;
+  }
+}
+@media screen and (max-width: 921.98px) {
+  .carousel #carouselCapstone .carousel-control-prev .polygon-1,
+.carousel #carouselCapstone .carousel-control-next .polygon-1 {
+    left: 20px;
+    top: 27vh;
+  }
+  .carousel #carouselCapstone .carousel-control-prev .polygon-2,
+.carousel #carouselCapstone .carousel-control-next .polygon-2 {
+    right: 20px;
+    top: 27vh;
+  }
+  .carousel #carouselCapstone .carousel-item.active {
+    height: 60vw;
+  }
+  .carousel #carouselCapstone .carousel-item.active .carousel__left img {
+    width: 100vw;
+  }
+  .carousel #carouselCapstone .carousel-item.active .carousel__right {
+    width: 30vw;
+    margin-left: 20px;
+  }
+  .carousel #carouselCapstone .carousel-item.active .carousel__right h2 {
+    margin-bottom: 0;
+  }
+  .carousel #carouselCapstone .carousel-item.active .carousel__right p {
+    margin-bottom: 2em;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .carousel #carouselCapstone .carousel-control-prev .polygon-1,
+.carousel #carouselCapstone .carousel-control-next .polygon-1 {
+    left: 20px;
+    top: 25vh;
+  }
+  .carousel #carouselCapstone .carousel-control-prev .polygon-2,
+.carousel #carouselCapstone .carousel-control-next .polygon-2 {
+    right: 20px;
+    top: 25vh;
+  }
+  .carousel #carouselCapstone .carousel-item.active {
+    height: 90vw;
+  }
+  .carousel #carouselCapstone .carousel-item.active .carousel__left img {
+    margin-bottom: 0;
+  }
+  .carousel #carouselCapstone .carousel-item.active .carousel__right {
+    margin-bottom: 0;
+  }
+  .carousel #carouselCapstone .carousel-item.active .carousel__right h2 {
+    margin-bottom: 0;
+  }
+  .carousel #carouselCapstone .carousel-item.active .carousel__right p {
+    margin-bottom: 2em;
+  }
+  .carousel #carouselCapstone .carousel-item.active .carousel__right a {
+    padding: 7px 18px 7px 18px;
+  }
+}
+.product {
+  padding-top: 16px;
+  padding-bottom: 56px;
+}
+.product .card {
+  background-color: #f8f8f8;
+  transform: scale(1);
+}
+.product .card:hover,
+.product .card :focus {
+  box-shadow: 6px 6px 10px #d1d9e6, -6px -6px 10px #f9f9f9;
+  transform: scale(0.985);
+  transition: 0.25s;
+}
+.product .card:hover .card-footer .left a,
+.product .card :focus .card-footer .left a {
+  font-size: 24px;
+  font-weight: 300;
+  color: #000000 !important;
+  line-height: 64px;
+}
+.product .card:hover .card-footer .right p,
+.product .card :focus .card-footer .right p {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000 !important;
+  line-height: 64px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: scale(0.985);
+}
+.product .card img {
+  width: 100%;
+  padding: 45px 57px 10px 57px;
+}
+.product .card .card-body {
+  padding-bottom: 13px;
+}
+.product .card .card-body h5 {
+  font-size: 24px;
+  font-weight: 300;
+  color: #000000 !important;
+  line-height: 29px;
+  margin-bottom: 8px;
+}
+.product .card .card-body p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #cbc9c9 !important;
+  line-height: 24.2px;
+}
+.product .card .card-footer {
+  border: none;
+  display: flex;
+}
+.product .card .card-footer .left {
+  width: 53%;
+  text-align: center;
+  height: 64px;
+  background-color: #e1b067;
+}
+.product .card .card-footer .left a {
+  font-size: 24px;
+  font-weight: 200;
+  color: #000000 !important;
+  line-height: 64px;
+  text-decoration: none;
+  display: block;
+}
+.product .card .card-footer .right {
+  width: 47%;
+  text-align: center;
+  height: 64px;
+  background-color: #dedddc;
+}
+.product .card .card-footer .right p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000 !important;
+  line-height: 64px;
+  margin-bottom: 0;
+}
+
+/**---------------RESPONSIVE--------------------**/
+@media screen and (max-width: 1199.98px) {
+  .product .card {
+    border-bottom: 0;
+  }
+  .product .card img {
+    width: 100%;
+    padding: 7vh 5vw 3vh 5vw;
+  }
+  .product .card .card-body {
+    padding: 3vh 2vw 2.2vh 2vw;
+  }
+  .product .card .card-body h5 {
+    font-size: 2.2vw;
+  }
+  .product .card .card-body p {
+    font-size: 2vw;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .product .card .card-body {
+    height: 130px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .product .card .card-body {
+    height: 120px;
+  }
+  .product .card .card-body h5 {
+    font-size: 30px;
+  }
+  .product .card .card-body p {
+    font-size: 20px;
+  }
+  .product .card .card-footer .left a {
+    font-size: 30px;
+  }
+  .product .card .card-footer .right p {
+    font-size: 30px;
   }
 }/*# sourceMappingURL=index.css.map */
