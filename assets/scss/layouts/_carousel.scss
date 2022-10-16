@@ -1,4 +1,5 @@
 .carousel {
+    padding-top: $pd1;
     padding-bottom: 30px;
     .carousel-control-prev,
     .carousel-control-next {
@@ -54,14 +55,14 @@
                 img {
                     // width: 50em;
                     padding-left: 122px;
-                    padding-bottom: 120px;
+                    padding-bottom: 140px;
                     object-fit: cover;
                 }
             }
 
             .carousel__right {
                 width: 40%;
-                padding-bottom: 120px;
+                padding-bottom: 140px;
                 padding-right: 50px;
 
                 h2 {
@@ -224,14 +225,12 @@
                 height: 90vw;
 
                 .carousel__left {
-                    display: block;
                     img {
                         margin-bottom: 0;
                     }
                 }
 
                 .carousel__right {
-                    display: block;
                     margin-bottom: 0;
 
                     h2 {
