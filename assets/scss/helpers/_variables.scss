@@ -47,7 +47,11 @@ $color19: #f50e0e;
 $color20: #f8f8f8;
 
 $color-Btn1: linear-gradient(180deg, #6181f3 0%, #7c97f5 99.48%);
-$color-Btn2: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #d017ee 89.71%);
+$color-Btn2: linear-gradient(
+  270deg,
+  rgba(62, 32, 248, 0.9) 5.14%,
+  #d017ee 89.71%
+);
 
 //Line height
 $lh1: 24.2px;
@@ -57,5 +61,6 @@ $lh4: 48.41px;
 $lh5: 29px;
 $lh6: 64px;
 $lh7: 50px;
+$lh8: 3.6vw;
 
 $pd1: 100px;

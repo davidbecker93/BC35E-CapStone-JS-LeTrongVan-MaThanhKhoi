@@ -165,7 +165,8 @@ header #navbarNav .navbar-nav .nav-item .disabled {
 .carousel #renderCarousel .active .carousel__left img {
   padding-left: 122px;
   padding-bottom: 140px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .carousel #renderCarousel .active .carousel__right {
   width: 40%;
@@ -420,6 +421,186 @@ header #navbarNav .navbar-nav .nav-item .disabled {
     font-size: 30px;
   }
 }
+.productName #showProductName {
+  padding-top: 70px;
+}
+.productName #showProductName .left {
+  position: relative;
+  width: 19.6vw;
+  height: 44.8vh;
+  top: 58px;
+  left: 65px;
+  background-color: #f8f8f8;
+}
+.productName #showProductName .left img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.productName #showProductName .right {
+  padding-top: 67px;
+  width: 29.5vw;
+}
+.productName #showProductName .right h3 {
+  font-size: 1.7vw;
+  font-weight: 300;
+  color: #000000 !important;
+  line-height: 36px;
+}
+.productName #showProductName .right p {
+  font-size: 1vw;
+  font-weight: 400;
+  color: #140101 !important;
+  line-height: 19px;
+}
+.productName #showProductName .right h4 {
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: #1ed90e !important;
+  line-height: 29px;
+}
+.productName #showProductName .right h5 {
+  font-size: 1.7vw;
+  font-weight: 600;
+  color: #fc0303 !important;
+  line-height: 36px;
+}
+.productName #showProductName .right .size li {
+  list-style: none;
+  width: 3vw;
+  height: 3.6vw;
+  text-align: center;
+  font-size: 1.4vw;
+  font-weight: 600;
+  color: #1e1d1d !important;
+  line-height: 3.6vw;
+  margin-right: 21px;
+  background-color: #cccccc;
+}
+.productName #showProductName .right .soLuong li {
+  list-style: none;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: #1e1d1d !important;
+  line-height: 50px;
+}
+.productName #showProductName .right .soLuong li button {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, #6181f3 0%, #7c97f5 99.48%);
+  color: #ffffff;
+  border: transparent;
+  cursor: pointer;
+}
+.productName #showProductName .right .soLuong li span {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  color: #000000 !important;
+  line-height: 50px;
+}
+.productName #showProductName .right button {
+  width: 11.4vw;
+  height: 10.3vh;
+  background-image: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #d017ee 89.71%);
+  border: none;
+  font-size: 1.7vw;
+  font-weight: 500;
+  color: #ffffff !important;
+  line-height: 50px;
+}
+
+/**---------------RESPONSIVE--------------------**/
+@media screen and (max-width: 767.98px) {
+  .productName .left {
+    width: 100%;
+    height: 40vh;
+    top: 0;
+    left: 0;
+  }
+  .productName .left img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .productName .right {
+    padding-top: 67px;
+    width: 100%;
+  }
+  .productName .right h3 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #000000 !important;
+    line-height: 36px;
+  }
+  .productName .right p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #140101 !important;
+    line-height: 19px;
+  }
+  .productName .right h4 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #1ed90e !important;
+    line-height: 29px;
+  }
+  .productName .right h5 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fc0303 !important;
+    line-height: 36px;
+  }
+  .productName .right .size li {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1e1d1d !important;
+    line-height: 50px;
+  }
+  .productName .right .soLuong li {
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #1e1d1d !important;
+    line-height: 50px;
+  }
+  .productName .right .soLuong li button {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #6181f3 0%, #7c97f5 99.48%);
+    color: #ffffff;
+    border: transparent;
+    cursor: pointer;
+  }
+  .productName .right .soLuong li span {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    color: #000000 !important;
+    line-height: 50px;
+  }
+  .productName .right button {
+    width: 142px;
+    height: 62px;
+    background-image: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #d017ee 89.71%);
+    border: none;
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: #ffffff !important;
+    line-height: 50px;
+  }
+}
 footer {
   margin-top: 40px;
 }
@@ -472,4 +653,103 @@ footer .footer__bottom li span {
   color: #f50e0e !important;
   line-height: 24.2px;
   cursor: pointer;
+}
+
+.register .left input,
+.register .right input {
+  border: none;
+  border-bottom: 5px solid;
+  border-image-source: linear-gradient(180deg, #AE18E2 0%, rgba(0, 0, 0, 0) 100%);
+  border-image-slice: 30;
+  width: 428px;
+  height: 36px;
+  margin-top: 26px;
+  margin-bottom: 5px;
+  padding-bottom: 8px;
+  font-size: 30px;
+  font-weight: 400;
+  color: #000000 !important;
+  line-height: 36px;
+}
+.register .left input:focus,
+.register .right input:focus {
+  outline: none;
+}
+.register .left span,
+.register .right span {
+  font-size: 20px;
+  font-weight: 400;
+  color: #f50e0e !important;
+  line-height: 24.2px;
+}
+.register li {
+  list-style: none;
+  margin-right: 28.54px;
+  position: relative;
+}
+.register li label {
+  font-size: 30px;
+  font-weight: 400;
+  color: #000000 !important;
+  line-height: 36px;
+}
+.register li span {
+  font-size: 20px;
+  font-weight: 400;
+  color: #f50e0e !important;
+  line-height: 24.2px;
+  position: absolute;
+  width: 540px;
+  top: 55px;
+  left: 0px;
+}
+.register li input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+  border-radius: 50%;
+  width: 65.42px;
+  height: 50px;
+  left: -70px;
+  z-index: 10;
+}
+.register li input:checked + .check::before {
+  opacity: 1;
+}
+.register .check {
+  position: absolute;
+  display: block;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  width: 65.42px;
+  height: 50px;
+  top: -5px;
+  left: -70px;
+  transition: all 0.25s linear;
+}
+.register .check::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #ae18e2;
+  border-radius: 50%;
+  width: 39.25px;
+  height: 30px;
+  top: 9px;
+  left: 13px;
+  opacity: 0;
+  transition: all 0.25s linear;
+}
+.register button {
+  width: 291px;
+  height: 50px;
+  border: transparent;
+  font-size: 30px;
+  font-weight: 400;
+  color: #ffffff !important;
+  line-height: 50px;
+  background-color: #ae18e2;
+  margin-bottom: 40px;
+  margin-top: 85px;
 }/*# sourceMappingURL=index.css.map */
