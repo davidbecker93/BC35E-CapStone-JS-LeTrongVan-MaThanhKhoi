@@ -1,23 +1,23 @@
 function getDataProduct() {
-  var promise = axios({
-    url: "https://shop.cyberlearn.vn/api/Product",
-    method: "GET",
-    ResponseType: " JSON",
-  });
-  //Thành công
-  promise.then(function (result) {
-    renderProduct(result.data.content);
-  });
-  //Thất bại
-  promise.catch(function (err) {
-    console.log(err);
-  });
+    var promise = axios({
+        url: "https://shop.cyberlearn.vn/api/Product",
+        method: "GET",
+        ResponseType: " JSON",
+    });
+    //Thành công
+    promise.then(function (result) {
+        renderProduct(result.data.content);
+    });
+    //Thất bại
+    promise.catch(function (err) {
+        console.log(err);
+    });
 }
 
 function renderProduct(arr) {
-  var caru = arr[0];
-  var contentHTML = ``;
-  var carouselHTML = `
+    var caru = arr[0];
+    var contentHTML = ``;
+    var carouselHTML = `
     <div class="carousel-item active">
             <div class="carousel__left">
                 <img src="${caru.image}" alt="...">
@@ -29,19 +29,19 @@ function renderProduct(arr) {
             </div>
         </div>
     `;
-  for (var i = 0; i < arr.length; i++) {
-    var prod = arr[i];
-    contentHTML += `
+    for (var i = 0; i < arr.length; i++) {
+        var prod = arr[i];
+        contentHTML += `
         <div class=" px-4 pb-5 col-12 col-sm-6 col-md-4">
             <div class="card">
-                <img src="${prod.image}" class="card-img-top" alt="...">
+                <a href="./detail.html?id=${prod.id}">
+                <img src="${prod.image}" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                     <h5 class="card-title">${prod.name}</h5>
-                    <p class="card-text">${
-                      prod.shortDescription.length > 75
-                        ? prod.shortDescription.substr(0, 75) + "..."
-                        : prod.shortDescription
-                    }</p>
+                    <p class="card-text">${prod.shortDescription.length > 75
+                ? prod.shortDescription.substr(0, 75) + "..."
+                : prod.shortDescription
+            }</p>
                 </div>
                 <div class="card-footer py-0 px-0 d-flex">
                     <div class="left">
@@ -54,11 +54,11 @@ function renderProduct(arr) {
             </div>
         </div>
         `;
-  }
-  document.querySelector("#showProduct").innerHTML = contentHTML;
-  for (var e = 1; e < 3; e++) {
-    prod = arr[e];
-    carouselHTML += `
+    }
+    document.querySelector("#showProduct").innerHTML = contentHTML;
+    for (var e = 1; e < 3; e++) {
+        prod = arr[e];
+        carouselHTML += `
         <div class="carousel-item">
             <div class="carousel__left">
                 <img src="${prod.image}" alt="...">
@@ -69,15 +69,15 @@ function renderProduct(arr) {
                 <a href="#">Buy now</a>
             </div>
         </div>
-        `;
-  }
-  document.querySelector("#renderCarousel").innerHTML = carouselHTML;
-}
+        `
+    };
+    document.querySelector('#renderCarousel').innerHTML = carouselHTML;
+};
 function addBuy() {
-  var count = 0;
-  count++;
-  document.getElementById("numBuy").innerHTML = "(" + count + ")";
-}
+    var count = 0;
+    count++;
+    document.getElementById("numBuy").innerHTML = "(" + count + ")";
+};
 window.onload = function () {
-  getDataProduct();
+    getDataProduct();
 };

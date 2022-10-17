@@ -49,7 +49,7 @@ function renderDetail(arrProduct) {
                                 <button>-</button>
                             </li>
                         </ul>
-                        <button>Add to cart</button>
+                        <button onclick="addBuy()">Add to cart</button>
                     </div>
                 </div>
         `;
@@ -100,6 +100,13 @@ function renderCard(arrProduct) {
     }
     document.querySelector('#showProduct').innerHTML = content;
 }
+
+var count = 0;
+function addBuy() {
+    count++;
+    console.log(count);
+    document.querySelector("#numBuy").innerHTML = "(" + count + ")";
+};
 
 window.onload = function () {
     getById();
