@@ -1,0 +1,165 @@
+.productName {
+    padding-top: $pd1;
+    .left {
+        position: relative;
+        width: 19.6vw;
+        height: 44.8vh;
+        top: 58px;
+        left: 65px;
+        background-color: $color11;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .right {
+        padding-top: 67px;
+        width: 29.5vw;
+
+        h3 {
+            @include text($fs11, $fw3, $color1, $lh3);
+        }
+
+        p {
+            @include text($fs13, $fw4, $color13, $lh2);
+        }
+
+        h4 {
+            @include text($fs12, $fw5, $color12, $lh5);
+        }
+
+        h5 {
+            @include text($fs11, $fw6, $color14, $lh3);
+        }
+
+        .size {
+            li {
+                list-style: none;
+                width: 3vw;
+                height: 6.5vh;
+                text-align: center;
+                line-height: 50px;
+                @include text($fs10, $fw6, $color16, $lh7);
+                margin-right: 21px;
+                background-color: $color15;
+            }
+        }
+
+        .soLuong {
+            li {
+                list-style: none;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 0px;
+                @include text($fs4, $fw6, $color16, $lh7);
+
+                button {
+                    width: 100%;
+                    height: 100%;
+                    background-image: $color-Btn1;
+                    color: $color3;
+                    border: transparent;
+                    cursor: pointer;
+                }
+
+                span {
+                    text-align: center;
+                    @include text($fs4, $fw4, $color1, $lh7);
+                }
+            }
+        }
+
+        button {
+            width: 11.4vw;
+            height: 10.3vh;
+            background-image: $color-Btn2;
+            border: none;
+            @include text($fs3, $fw5, $color3, $lh7);
+        }
+    }
+}
+
+/**---------------RESPONSIVE--------------------**/
+
+@media screen and(max-width:767.98px) {
+    .productName {
+        .left {
+            width: 100%;
+            height: 40vh;
+            top: 0;
+            left: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .right {
+            padding-top: 67px;
+            width: 100%;
+
+            h3 {
+                @include text($fs4, $fw3, $color1, $lh3);
+            }
+
+            p {
+                @include text($fs1, $fw4, $color13, $lh2);
+            }
+
+            h4 {
+                @include text($fs3, $fw5, $color12, $lh5);
+            }
+
+            h5 {
+                @include text($fs4, $fw6, $color14, $lh3);
+            }
+
+            .size {
+                li {
+                    width: 50px;
+                    height: 50px;
+                    @include text($fs3, $fw6, $color16, $lh7);
+                }
+            }
+
+            .soLuong {
+                li {
+                    list-style: none;
+                    width: 50px;
+                    height: 50px;
+                    text-align: center;
+                    line-height: 50px;
+                    @include text($fs4, $fw6, $color16, $lh7);
+
+                    button {
+                        width: 100%;
+                        height: 100%;
+                        background-image: $color-Btn1;
+                        color: $color3;
+                        border: transparent;
+                        cursor: pointer;
+                    }
+
+                    span {
+                        text-align: center;
+                        @include text($fs4, $fw4, $color1, $lh7);
+                    }
+                }
+            }
+
+            button {
+                width: 142px;
+                height: 62px;
+                background-image: $color-Btn2;
+                border: none;
+                @include text($fs12, $fw5, $color3, $lh7);
+            }
+        }
+    }
+}

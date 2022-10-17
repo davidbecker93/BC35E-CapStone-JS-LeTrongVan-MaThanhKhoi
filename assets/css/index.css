@@ -420,6 +420,186 @@ header #navbarNav .navbar-nav .nav-item .disabled {
     font-size: 30px;
   }
 }
+.productName {
+  padding-top: 100px;
+}
+.productName .left {
+  position: relative;
+  width: 19.6vw;
+  height: 44.8vh;
+  top: 58px;
+  left: 65px;
+  background-color: #f8f8f8;
+}
+.productName .left img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.productName .right {
+  padding-top: 67px;
+  width: 29.5vw;
+}
+.productName .right h3 {
+  font-size: 1.7vw;
+  font-weight: 300;
+  color: #000000 !important;
+  line-height: 36px;
+}
+.productName .right p {
+  font-size: 1vw;
+  font-weight: 400;
+  color: #140101 !important;
+  line-height: 19px;
+}
+.productName .right h4 {
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: #1ed90e !important;
+  line-height: 29px;
+}
+.productName .right h5 {
+  font-size: 1.7vw;
+  font-weight: 600;
+  color: #fc0303 !important;
+  line-height: 36px;
+}
+.productName .right .size li {
+  list-style: none;
+  width: 3vw;
+  height: 6.5vh;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.4vw;
+  font-weight: 600;
+  color: #1e1d1d !important;
+  line-height: 50px;
+  margin-right: 21px;
+  background-color: #cccccc;
+}
+.productName .right .soLuong li {
+  list-style: none;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 0px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #1e1d1d !important;
+  line-height: 50px;
+}
+.productName .right .soLuong li button {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, #6181f3 0%, #7c97f5 99.48%);
+  color: #ffffff;
+  border: transparent;
+  cursor: pointer;
+}
+.productName .right .soLuong li span {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  color: #000000 !important;
+  line-height: 50px;
+}
+.productName .right button {
+  width: 11.4vw;
+  height: 10.3vh;
+  background-image: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #d017ee 89.71%);
+  border: none;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff !important;
+  line-height: 50px;
+}
+
+/**---------------RESPONSIVE--------------------**/
+@media screen and (max-width: 767.98px) {
+  .productName .left {
+    width: 100%;
+    height: 40vh;
+    top: 0;
+    left: 0;
+  }
+  .productName .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .productName .right {
+    padding-top: 67px;
+    width: 100%;
+  }
+  .productName .right h3 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #000000 !important;
+    line-height: 36px;
+  }
+  .productName .right p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #140101 !important;
+    line-height: 19px;
+  }
+  .productName .right h4 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #1ed90e !important;
+    line-height: 29px;
+  }
+  .productName .right h5 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fc0303 !important;
+    line-height: 36px;
+  }
+  .productName .right .size li {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1e1d1d !important;
+    line-height: 50px;
+  }
+  .productName .right .soLuong li {
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #1e1d1d !important;
+    line-height: 50px;
+  }
+  .productName .right .soLuong li button {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #6181f3 0%, #7c97f5 99.48%);
+    color: #ffffff;
+    border: transparent;
+    cursor: pointer;
+  }
+  .productName .right .soLuong li span {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    color: #000000 !important;
+    line-height: 50px;
+  }
+  .productName .right button {
+    width: 142px;
+    height: 62px;
+    background-image: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #d017ee 89.71%);
+    border: none;
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: #ffffff !important;
+    line-height: 50px;
+  }
+}
 footer {
   margin-top: 40px;
 }

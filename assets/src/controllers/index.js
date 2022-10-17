@@ -34,7 +34,8 @@ function renderProduct(arr) {
         contentHTML += `
         <div class=" px-4 pb-5 col-12 col-sm-6 col-md-4">
             <div class="card">
-                <img src="${prod.image}" class="card-img-top" alt="...">
+                <a href="./detail.html?id=${prod.id}">
+                <img src="${prod.image}" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                     <h5 class="card-title">${prod.name}</h5>
                     <p class="card-text">${prod.shortDescription.length > 75 ? prod.shortDescription.substr(0, 75) + '...' : prod.shortDescription}</p>
@@ -69,11 +70,7 @@ function renderProduct(arr) {
     };
     document.querySelector('#renderCarousel').innerHTML = carouselHTML;
 };
-function addBuy() {
-    var count = 0;
-    count++;
-    document.getElementById("numBuy").innerHTML = "(" + count + ")";
-};
+
 window.onload = function () {
     getDataProduct();
 };
