@@ -25,7 +25,7 @@ function renderProduct(arr) {
             <div class="carousel__right">
                 <h2>${caru.name}</h2>
                 <p>${caru.shortDescription}</p>
-                <a href="#">Buy now</a>
+                <a href="./detail.html?id=${caru.id}">Buy now</a>
             </div>
         </div>
     `;
@@ -66,7 +66,7 @@ function renderProduct(arr) {
             <div class="carousel__right">
                 <h2>${prod.name}</h2>
                 <p>${prod.shortDescription}</p>
-                <a href="#">Buy now</a>
+                <a href="./detail.html?id=${prod.id}">Buy now</a>
             </div>
         </div>
         `
