@@ -478,6 +478,9 @@ header #navbarNav .navbar-nav .nav-item .disabled {
   margin-right: 21px;
   background-color: #cccccc;
 }
+.productName #showProductName .right .size li:hover {
+  background-color: #000000;
+}
 .productName #showProductName .right .soLuong li {
   list-style: none;
   width: 50px;
@@ -659,13 +662,13 @@ footer .footer__bottom li span {
 .register .right input {
   border: none;
   border-bottom: 5px solid;
-  border-image-source: linear-gradient(180deg, #AE18E2 0%, rgba(0, 0, 0, 0) 100%);
+  border-image-source: linear-gradient(180deg, #ae18e2 0%, rgba(0, 0, 0, 0) 100%);
   border-image-slice: 30;
   width: 428px;
   height: 36px;
   margin-top: 26px;
   margin-bottom: 5px;
-  padding-bottom: 8px;
+  padding-bottom: 3px;
   font-size: 30px;
   font-weight: 400;
   color: #000000 !important;
