@@ -25,6 +25,7 @@ function getByCategory() {
 
     promise.then(function (result) {
         renderProduct(result.data.content);
+        document.querySelector("#Product").scrollIntoView({ behavior: 'smooth' });
     });
 
     promise.catch(function (error) {
