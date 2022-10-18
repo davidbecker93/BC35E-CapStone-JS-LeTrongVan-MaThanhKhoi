@@ -45,6 +45,9 @@
                     @include text($fs10, $fw6, $color16, $lh8);
                     margin-right: 21px;
                     background-color: $color15;
+                    &:checked {
+                        background-color: $color1;
+                    }
                 }
             }
 
