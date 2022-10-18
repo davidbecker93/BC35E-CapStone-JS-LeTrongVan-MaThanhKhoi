@@ -11,14 +11,13 @@ function getById() {
         console.log(result.data.content);
         var productDetail = result.data.content;
         renderDetail(productDetail);
-        checkGia(productDetail.price)
+        checkGia(productDetail.price);
     });
 
     promise.catch(function (error) {
         console.log(error);
     });
-}
-
+};
 
 function renderDetail(arrProduct) {
     var content = `
@@ -139,8 +138,29 @@ function tinhTien(a) {
 function checkGia(b) {
     giaSP = b;
     return giaSP;
-}
+};
+
+function getByCategory() {
+    var paramId = new URLSearchParams(window.location.search);
+    var categoryId = paramId.get('categoryId');
+    var promise = axios({
+        url: `https://shop.cyberlearn.vn/api/Product/getProductByCategory?categoryId=${categoryId}`,
+        method: 'GET',
+        ResponseType: 'JSON'
+    });
+
+    promise.then(function (result) {
+        renderCard(result.data.content);
+        document.querySelector("#Product").scrollIntoView({ behavior: 'smooth' });
+    });
+
+    promise.catch(function (error) {
+        console.log(error);
+    });
+};
+
 window.onload = function () {
     getById();
     getProduct();
+    getByCategory();
 }
