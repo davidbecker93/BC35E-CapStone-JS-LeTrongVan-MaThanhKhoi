@@ -13,20 +13,15 @@ function getInfoUser() {
 
     /**---------------------------Check Validation---------------------------*/
     // Email
-    isValid &= validation.checkEmail(email, '#tbEmail', '(*) Vui lòng nhập đúng email');
-    isValid &= validation.checkEmpty(email, '#tbEmail', '(*) Vui lòng nhập email');
+    isValid &= validation.checkEmpty(email, '#tbEmail', '(*) Vui lòng nhập email') && validation.checkEmail(email, '#tbEmail', '(*) Vui lòng nhập đúng email');
 
     // Password
-    isValid &= validation.checkLength(password, '#tbPassword', '(*) Mật khãu phải chứa 8-12 kí tự', 8, 12);
-    isValid &= validation.checkPassword(password, '#tbPassword', '(*)  Mật khẩu phải có ít nhất một chữ cái in hoa,<br> một chữ cái viết thường , một số và một kí tự đặc biệt');
-    isValid &= validation.confirmPassword(rePassword, password, '#tbRePassword', '(*) Vui lòng nhập lại giống mật khẩu');
-    isValid &= validation.checkEmpty(rePassword, '#tbRePassword', '(*) Vui lòng xác nhận lại mật khẩu');
-    isValid &= validation.checkEmpty(password, '#tbPassword', '(*) Vui lòng nhập mật khẩu');
+    isValid &= validation.checkEmpty(password, '#tbPassword', '(*) Vui lòng nhập mật khẩu') && validation.checkLength(password, '#tbPassword', '(*) Mật khãu phải chứa 8-12 kí tự', 7, 13) && validation.checkPassword(password, '#tbPassword', '(*)  Mật khẩu phải có ít nhất một chữ cái in hoa,<br> một chữ cái viết thường , một số và một kí tự đặc biệt');
+    isValid &= validation.checkEmpty(rePassword, '#tbRePassword', '(*) Vui lòng xác nhận lại mật khẩu') && validation.confirmPassword(rePassword, password, '#tbRePassword', '(*) Vui lòng nhập lại giống mật khẩu');
 
 
     // Name
-    isValid &= validation.checkName(name, '#tbName', '(*) Vui lòng nhập tên không chứa số và kí tự đặc biệt');
-    isValid &= validation.checkEmpty(name, '#tbName', '(*) Vui lòng nhập tên');
+    isValid &= validation.checkEmpty(name, '#tbName', '(*) Vui lòng nhập tên') && validation.checkName(name, '#tbName', '(*) Vui lòng nhập tên không chứa số và kí tự đặc biệt');
 
     // Phone 
     isValid &= validation.checkEmpty(phone, '#tbPhone', '(*) Vui lòng nhập số điện thoại');

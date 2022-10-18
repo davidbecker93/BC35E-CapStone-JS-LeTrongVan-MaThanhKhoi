@@ -19,6 +19,7 @@ function getById() {
     });
 }
 
+
 function renderDetail(arrProduct) {
     var content = `
          <div class=" col-4 pr-0">
