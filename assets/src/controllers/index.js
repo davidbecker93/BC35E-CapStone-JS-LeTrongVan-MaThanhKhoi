@@ -92,8 +92,17 @@ function renderProduct(arr) {
     };
     document.querySelector('#renderCarousel').innerHTML = carouselHTML;
 };
+//Lấy data
+function getLocalStorage() {
+    if (localStorage.getItem("NumBuy")) {
+        var dataString = localStorage.getItem("NumBuy");
+        var numBuy = JSON.parse(dataString);
+        document.querySelector("#numBuy").innerHTML = "(" + numBuy + ")";
+    }
+}
 
 window.onload = function () {
     getDataProduct();
     getByCategory();
+    getLocalStorage();
 };

@@ -12,6 +12,7 @@ function getById() {
         var productDetail = result.data.content;
         renderDetail(productDetail);
         checkGia(productDetail.price);
+        detailID(id);
     });
 
     promise.catch(function (error) {
@@ -108,6 +109,7 @@ var giaSP = 0;
 function addBuy() {
     count += SL;
     document.querySelector("#numBuy").innerHTML = "(" + count + ")";
+    setLocalStorage();
     SL = 1;
     tinhTien(SL);
     document.querySelector('#soL').innerHTML = SL;
@@ -139,6 +141,28 @@ function checkGia(b) {
     giaSP = b;
     return giaSP;
 };
+function detailID(id) {
+    var content = `
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+                <a class="nav-link active" href="./index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="detail.html?id=${id}&categoryId=MEN">Men</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="detail.html?id=${id}&categoryId=WOMEN">Woman</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled">Kid</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled">Sport</a>
+        </li>
+    </ul>
+    `
+    document.querySelector("#navbarNav").innerHTML = content;
+}
 
 function getByCategory() {
     var paramId = new URLSearchParams(window.location.search);
@@ -158,9 +182,23 @@ function getByCategory() {
         console.log(error);
     });
 };
-
+//Lưu data
+function setLocalStorage() {
+    var dataString = JSON.stringify(count);
+    localStorage.setItem("NumBuy", dataString);
+}
+//Lấy data
+function getLocalStorage() {
+    if (localStorage.getItem("NumBuy")) {
+        var dataString = localStorage.getItem("NumBuy");
+        var numBuy = JSON.parse(dataString);
+        document.querySelector("#numBuy").innerHTML = "(" + numBuy + ")";
+        return count = numBuy;
+    }
+}
 window.onload = function () {
     getById();
     getProduct();
     getByCategory();
+    getLocalStorage();
 }
