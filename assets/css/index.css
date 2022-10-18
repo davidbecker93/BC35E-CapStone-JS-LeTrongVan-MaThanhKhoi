@@ -148,7 +148,7 @@ header #navbarNav .navbar-nav .nav-item .disabled {
 }
 .carousel #renderCarousel {
   height: 530px;
-  background-image: url(assets/img/image%206.png);
+  background-image: url(/assets/img/image6.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
