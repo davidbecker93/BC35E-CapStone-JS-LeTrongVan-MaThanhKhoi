@@ -36,7 +36,7 @@ function Validation() {
     }
 
     this.checkLength = function (value, elementError, mess, min, max) {
-        if (value.length > min && value.lenth < max) {
+        if (value.length > min && value.length < max) {
             document.querySelector(elementError).innerHTML = "";
             document.querySelector(elementError).style.display = "none";
             return true;
