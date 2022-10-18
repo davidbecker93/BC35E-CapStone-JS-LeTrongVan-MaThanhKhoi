@@ -12,7 +12,7 @@ function getDataProduct() {
     promise.catch(function (err) {
         console.log(err);
     });
-}
+};
 
 function getByCategory() {
     var paramId = new URLSearchParams(window.location.search);
@@ -31,7 +31,7 @@ function getByCategory() {
     promise.catch(function (error) {
         console.log(error);
     });
-}
+};
 
 function renderProduct(arr) {
     var caru = arr[0];
