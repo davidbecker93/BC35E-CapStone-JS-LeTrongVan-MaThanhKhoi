@@ -58,11 +58,24 @@ function getInfoUser() {
     );
 
   // Phone
-  isValid &= validation.checkEmpty(
-    phone,
-    "#tbPhone",
-    "(*) Vui lòng nhập số điện thoại"
-  );
+  isValid &=
+    validation.checkEmpty(
+      phone,
+      "#tbPhone",
+      "(*) Vui lòng nhập số điện thoại"
+    ) &&
+    validation.checkPhone(
+      phone,
+      "#tbPhone",
+      "(*) Vui lòng đúng số điện thoại"
+    ) &&
+    validation.checkLength(
+      phone,
+      "#tbPhone",
+      "(*) Số điện thoại có 10 hoặc 11 số",
+      10,
+      11
+    );
 
   // Gender
   isValid &= validation.checkRadioEmpty(
@@ -126,4 +139,4 @@ function getLocalStorage() {
 }
 window.onload = function () {
   getLocalStorage();
-}
+};
