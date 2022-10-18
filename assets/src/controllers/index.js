@@ -14,6 +14,24 @@ function getDataProduct() {
     });
 }
 
+function getByCategory() {
+    var paramId = new URLSearchParams(window.location.search);
+    var categoryId = paramId.get('categoryId');
+    var promise = axios({
+        url: `https://shop.cyberlearn.vn/api/Product/getProductByCategory?categoryId=${categoryId}`,
+        method: 'GET',
+        ResponseType: 'JSON'
+    });
+
+    promise.then(function (result) {
+        renderProduct(result.data.content);
+    });
+
+    promise.catch(function (error) {
+        console.log(error);
+    });
+}
+
 function renderProduct(arr) {
     var caru = arr[0];
     var contentHTML = ``;
@@ -73,11 +91,8 @@ function renderProduct(arr) {
     };
     document.querySelector('#renderCarousel').innerHTML = carouselHTML;
 };
-function addBuy() {
-    var count = 0;
-    count++;
-    document.getElementById("numBuy").innerHTML = "(" + count + ")";
-};
+
 window.onload = function () {
     getDataProduct();
+    getByCategory();
 };
